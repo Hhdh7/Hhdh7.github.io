@@ -1,0 +1,92 @@
+﻿.upper p {
+    position: absolute;
+    width: max-content;
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+    animation: moving 60s linear infinite;
+    text-wrap: nowrap
+}.fixedIcon,
+.fixedNav{
+    position: fixed;
+    left: 0;
+    top: 180px;
+    direction: ltr;
+    z-index: 1;
+}
+.fixedNav{
+    direction: rtl;
+    right:0;
+    left: unset;
+}
+.fixedIcon ul,
+.fixedNav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.fixedIcon ul li,
+.fixedNav ul li{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.fixedIcon ul li:hover,
+.fixedNav ul li:hover{
+    width: 60px;
+}
+.fixedIcon ul a,
+.fixedNav ul li{position: relative;}
+
+.fixedIcon .iconDes,
+.fixedNav .iconDes{
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 70px;
+    transform: translateY(-10px);
+    background: var(--main-color2);
+    padding: 3px;
+    color: #fff;
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    transition: display 5s ease-in-out;
+}
+
+.fixedNav .iconDes.hideSpan{right: 70px;left:unset;padding: 0;width: 130px;display: block;}
+
+.fixedIcon .iconDes::before,
+.fixedNav .iconDes::before{
+    content: '';
+    height: 0px;
+    width: 0px;
+    display: block;
+    top: 5px;
+    left: -20px;
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--main-color2);
+    border-left: 10px solid transparent;
+}
+.fixedNav .iconDes::before{
+    right: -20px;
+    left: unset;
+    border-right: 10px solid transparent;
+    border-left: 10px solid var(--main-color2);
+}
+.fixedIcon ul a:hover .iconDes,
+.fixedNav  ul li:hover .iconDes{display: block;}
+
+.fixedIcon ul li i,
+.fixedNav ul li img{
+    font-size: 20px !important;
+    background: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    mix-blend-mode: multiply;
+}
+
+   
